@@ -19,7 +19,7 @@ namespace Microsoft.Azure.Devices.Client.Samples
         {
             try
             {
-                DeviceClient deviceClient = DeviceClient.CreateFromConnectionString(DeviceConnectionString, TransportType.Http1);
+                DeviceClient deviceClient = DeviceClient.CreateFromConnectionString(DeviceConnectionString, TransportType.Amqp);
 
                 await SendEvent(deviceClient);
                 await ReceiveCommands(deviceClient);
